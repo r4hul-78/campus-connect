@@ -1,0 +1,130 @@
+.cart-info {
+  width: 100%;
+}
+
+.info-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-color);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-moving {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.status-stopped {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-idle {
+  background-color: #f3e8ff;
+  color: #6d28d9;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+  text-align: right;
+}
+
+.cart-name {
+  color: var(--primary-start);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.detail-value.full {
+  color: var(--status-stopped);
+}
+
+.occupancy-bar-container {
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.occupancy-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.occupancy-percentage {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.occupancy-bar {
+  width: 100%;
+  height: 12px;
+  background-color: var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.occupancy-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--status-moving) 0%, var(--primary-start) 50%, var(--status-stopped) 100%);
+  transition: width var(--transition-normal);
+  border-radius: var(--radius-sm);
+}
+

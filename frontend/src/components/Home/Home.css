@@ -1,0 +1,260 @@
+.home-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 50%, #f093fb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.logo-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.project-title {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-extrabold);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 var(--spacing-xs) 0;
+  letter-spacing: -0.02em;
+}
+
+.project-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+}
+
+.college-info {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.college-name {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.college-location {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+.dashboard-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  border: 3px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.dashboard-btn:hover::before {
+  left: 100%;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.student-btn:hover {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.admin-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+}
+
+.btn-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-btn:hover .btn-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.btn-content {
+  flex: 1;
+}
+
+.btn-content h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--text-primary);
+  transition: color var(--transition-normal);
+}
+
+.dashboard-btn:hover .btn-content h3 {
+  color: white;
+}
+
+.btn-content p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--text-secondary);
+  transition: color var(--transition-normal);
+}
+
+.dashboard-btn:hover .btn-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-arrow {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-tertiary);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.dashboard-btn:hover .btn-arrow {
+  color: white;
+  transform: translateX(8px);
+}
+
+.home-footer {
+  text-align: center;
+  padding-top: var(--spacing-xl);
+  border-top: 2px solid var(--border-color);
+}
+
+.home-footer p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .college-name {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-btn {
+    padding: 1.5rem;
+  }
+
+  .btn-icon {
+    font-size: 2.5rem;
+  }
+
+  .btn-content h3 {
+    font-size: 1.25rem;
+  }
+}
+

@@ -1,0 +1,183 @@
+.route-info {
+  width: 100%;
+}
+
+.route-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.route-name-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background: var(--primary-gradient);
+  border-radius: var(--radius-md);
+  color: white;
+}
+
+.route-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-weight: var(--font-weight-normal);
+}
+
+.route-name {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.eta-section {
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--status-moving) 0%, #059669 100%);
+  border-radius: var(--radius-md);
+  color: white;
+  text-align: center;
+}
+
+.eta-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.eta-label {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  font-weight: var(--font-weight-normal);
+}
+
+.eta-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.eta-time {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.eta-unit {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-normal);
+  opacity: 0.9;
+}
+
+.eta-details {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: var(--spacing-xs);
+}
+
+.stops-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.stops-title {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.stops-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.stop-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.stop-item:hover {
+  background-color: #f3f4f6;
+  border-color: var(--border-color-hover);
+  transform: translateX(4px);
+}
+
+.stop-item.selected {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  border-color: var(--primary-start);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.stop-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--primary-gradient);
+  color: white;
+  border-radius: 50%;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.stop-item.selected .stop-number {
+  background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.stop-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stop-name {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.stop-eta {
+  margin-top: 0.25rem;
+}
+
+.eta-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--status-moving);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.selected-indicator {
+  color: var(--primary-start);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .eta-time {
+    font-size: 2.5rem;
+  }
+
+  .stop-item {
+    padding: 0.75rem;
+  }
+}
+
