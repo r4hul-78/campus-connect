@@ -7,7 +7,7 @@ A web-based College Electric Cart Tracking System for **Maharishi Markandeshwar 
 ## 📋 Table of Contents
 
 - [Features](#features)
-- [Screenshots](#screenshots)
+- [Google Technologies](#google-technologies)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Technology Stack](#technology-stack)
@@ -35,6 +35,14 @@ A web-based College Electric Cart Tracking System for **Maharishi Markandeshwar 
 - 🏠 **Landing Page:** Beautiful home screen with navigation
 - 🎨 **Modern UI:** Gradient design with smooth animations
 - 🔀 **Easy Navigation:** Quick access to Student and Admin dashboards
+
+## 🌐 Google Technologies
+
+- 🗺️ **Google Maps JavaScript API:**  
+  - Real-time visualization of electric cart locations on the campus map  
+  - Displays predefined route with all cart stops  
+  - Supports tracking of multiple carts (Red Cart and Blue Cart)  
+  - Enhances ETA accuracy and live movement representation
 
 ## 📁 Project Structure
 
